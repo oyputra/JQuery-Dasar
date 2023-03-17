@@ -27,10 +27,18 @@
         <h1>Belajar JQuery!!</h1>
         <div id="box1">Box 1</div>
 
-        <div class="boxes">Baris Pertama</div>
-        <div class="boxes">Baris Kedua</div>
-        <div class="boxes">Baris Antara Kedua dan Ketiga</div>
-        <div class="boxes">Baris Ketiga</div>
+        <form id="boxes_wrap">
+            <div class="boxes">Baris Pertama</div>
+            <div class="boxes">Baris Kedua</div>
+            <div class="boxes">Baris Antara Kedua dan Ketiga</div>
+            <div class="boxes">Baris Ketiga</div>
+            <input type="submit" value="Change">
+        </form>
+
+        <form action="">
+            <input type="text" id="inputText">
+            <input type="submit">
+        </form>
     </div>
 </body>
 <script>
@@ -57,6 +65,20 @@
         });
         $('.boxes').mouseenter(function(){
             $(this).css('color', 'yellow');
+        });
+
+        // get dan set nilai
+        $('form').submit(function(){
+            var tulisan = $('#inputText').val();
+            $('h1').text(tulisan);
+
+            // mencegah reload/sifat
+            event.preventDefault();
+        });
+
+        $('#boxes_wrap').submit(function(){
+            $('#boxes_wrap').html("<b>Data Terubah!</b>");
+            event.preventDefault();
         });
     });
 </script>
