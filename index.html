@@ -36,6 +36,7 @@
 <script>
     // memastikan file sudah diload dengan sempurna
     $(document).ready(function(){
+        // selection
         $('h1').css('color', 'blue');
         $('#box1').css('color', 'blue');
         $('.boxes').css('color', 'blue');
@@ -43,6 +44,20 @@
         $('.boxes:first').css('color', 'orange');
         $('.boxes:last').css('color', 'green');
         $('.boxes:eq(2)').css('color', 'aqua');
+
+        // event
+        $('h1').click(function(){
+            $('h1').css('color', 'red');
+        });
+        $('h1').mouseenter(function(){
+            $('h1').css('color', 'yellow');
+        });
+        $('h1').mouseleave(function(){
+            $('h1').css('color', 'green');
+        });
+        $('.boxes').mouseenter(function(){
+            $(this).css('color', 'yellow');
+        });
     });
 </script>
 </html>
