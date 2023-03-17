@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belajar JQuery</title>
     <style>
-        img{
+        .container {
+            width: 1100px;
+            margin: 0 auto;
+        }
+        img {
             width: 100%; 
-            /* transform: rotate(180deg);  */
+            height: 400px;
+            object-fit: cover;
+            transform: rotate(180deg); 
         }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="jquery.js"></script>
 </head>
 <body>
-    <img src="https://images.unsplash.com/photo-1570206913724-17f67ed3a6d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80" alt="">
-    <h1>Belajar JQuery!!</h1>
+    <div class="container">
+        <img src="ramadan.jpg" alt="">
+        <h1>Belajar JQuery!!</h1>
+    </div>
 </body>
 </html>
