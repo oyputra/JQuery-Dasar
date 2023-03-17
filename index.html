@@ -16,6 +16,10 @@
             object-fit: cover;
             transform: rotate(180deg); 
         }
+        #boxes_wrap {
+            padding: 10px;
+            background: gray;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -80,6 +84,17 @@
             $('#boxes_wrap').html("<b>Data Terubah!</b>");
             event.preventDefault();
         });
+
+        // menambahkan dan menghapus
+        // append & prepend (di dalam elemen) | after & before (di luar elemen)
+        $('#boxes_wrap').append('<div>ini Append</div>');
+        $('#boxes_wrap').prepend('<div>ini Prepend</div>');
+        $('#boxes_wrap').before('<div>ini Before</div>');
+        $('#boxes_wrap').after('<div>ini After</div>');
+
+        // remove & empty
+        $('.boxes:eq(2)').remove();
+        $('.boxes:eq(1)').empty();
     });
 </script>
 </html>
