@@ -20,6 +20,14 @@
             padding: 10px;
             background: gray;
         }
+        .change {
+            background: yellow;
+            color: white;
+        }
+        .change-remove {
+            background: gray;
+            color: black;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -49,7 +57,7 @@
     // memastikan file sudah diload dengan sempurna
     $(document).ready(function(){
         // selection
-        $('h1').css('color', 'blue');
+        // $('h1').css('color', 'blue');
         $('#box1').css('color', 'blue');
         $('.boxes').css('color', 'blue');
 
@@ -57,19 +65,31 @@
         $('.boxes:last').css('color', 'green');
         $('.boxes:eq(2)').css('color', 'aqua');
 
-        // event
+        // event | mutliple css
         $('h1').click(function(){
-            $('h1').css('color', 'red');
+            // $('h1').css({
+            //     'color': 'white',
+            //     'fontSize': '50px',
+            //     'backgroundColor': 'lightblue'
+            // });
+
+            // add & remove class
+            // $('h1').addClass('change');
+            // $('h1').removeClass('change-remove');
+            
+            // toggle class
+            $('h1').toggleClass('change');
+            
         });
-        $('h1').mouseenter(function(){
-            $('h1').css('color', 'yellow');
-        });
-        $('h1').mouseleave(function(){
-            $('h1').css('color', 'green');
-        });
-        $('.boxes').mouseenter(function(){
-            $(this).css('color', 'yellow');
-        });
+        // $('h1').mouseenter(function(){
+        //     $('h1').css('color', 'yellow');
+        // });
+        // $('h1').mouseleave(function(){
+        //     $('h1').css('color', 'green');
+        // });
+        // $('.boxes').mouseenter(function(){
+        //     $(this).css('color', 'yellow');
+        // });
 
         // get dan set nilai
         $('form').submit(function(){
@@ -95,6 +115,7 @@
         // remove & empty
         $('.boxes:eq(2)').remove();
         $('.boxes:eq(1)').empty();
+
     });
 </script>
 </html>
