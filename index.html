@@ -17,8 +17,12 @@
             transform: rotate(180deg); 
         }
         #boxes_wrap {
-            padding: 10px;
             background: gray;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 5px solid black;
+            margin: 10px;
         }
         .change {
             background: yellow;
@@ -115,6 +119,17 @@
         // remove & empty
         $('.boxes:eq(2)').remove();
         $('.boxes:eq(1)').empty();
+
+        // dimensi
+        /*
+            width       -> kontent
+            innerWidth  -> kontent + padding
+            outerWidth  -> kontent + padding + border
+            (true)      -> + margin  
+        */
+        // var nilai = $('#boxes_wrap').innerWidth();
+        var nilai = $('#boxes_wrap').outerWidth(true);
+        $('#box1').text(nilai);
 
     });
 </script>
