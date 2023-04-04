@@ -97,10 +97,10 @@
     <div class="container mt-5">
         <ul class="fs-5">
             <li>Belajar</li>
-            <li>HTML</li>
+            <li id="css_siblings">HTML</li>
             <li id="css">css</li>
             <li>jquery</li>
-            <li>database</li>
+            <li id="db">database</li>
         </ul>
     </div>
 </body>
@@ -238,6 +238,12 @@
 
         $('li').filter('#css').css('fontSize', '60px');
         $('li').not('#css').css('backgroundColor', 'aqua');
+
+        // siblings: next, nextAll, nextUntill('param'), prev(All, Untill)
+        $('#css_siblings').siblings().css('fontSize', '10px');
+        $('#css_siblings').next().css('backgroundColor', 'red');
+        $('#css_siblings').prevAll().css('color', 'orange');
+        $('#css_siblings').nextUntil('#db').css('color', 'yellow');
     });
 </script>
 </html>
