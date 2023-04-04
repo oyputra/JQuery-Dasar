@@ -39,6 +39,8 @@
             height: 100px;
             width: 100px;
             background-color: grey;
+            border: 10px solid aqua;
+            border-radius: 10px;
         }
     </style>
 
@@ -83,6 +85,11 @@
         <button id="btn9">Slide Down</button>
         <button id="btn10">Slide Up</button>
         <button id="btn11">Slide Toggle</button>
+        <br>
+        <br>
+        <button id="btn12">Stop Animation</button>
+        <button id="btn13">Callback</button>
+        <button id="btn14">Chaining</button>
 
     </div>
 </body>
@@ -199,6 +206,19 @@
         $('#btn11').click(function() {
             $('#box2').slideToggle(2000);
         }) 
+
+        // stop animasi & chaining & callback
+        $('#btn12').click(function() {
+            $('#box2').stop();
+        })
+        $('#btn13').click(function() {
+            $('#box2').slideToggle(2000, function() {
+                alert('Box 2 Berhasil terubah!')
+            });
+        })
+        $('#btn14').click(function() {
+            $('#box2').fadeOut(2000).fadeIn(2000).fadeTo(2000, 0.2);
+        })
 
     });
 </script>
