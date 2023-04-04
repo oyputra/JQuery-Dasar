@@ -42,6 +42,9 @@
             border: 10px solid aqua;
             border-radius: 10px;
         }
+        .fs-5 {
+            font-size: 25px;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -90,7 +93,15 @@
         <button id="btn12">Stop Animation</button>
         <button id="btn13">Callback</button>
         <button id="btn14">Chaining</button>
-
+    </div>
+    <div class="container mt-5">
+        <ul class="fs-5">
+            <li>Belajar</li>
+            <li>HTML</li>
+            <li id="css">css</li>
+            <li>jquery</li>
+            <li>database</li>
+        </ul>
     </div>
 </body>
 <script>
@@ -220,6 +231,13 @@
             $('#box2').fadeOut(2000).fadeIn(2000).fadeTo(2000, 0.2);
         })
 
+        // traversing
+        $('li').first().css('color', 'blue');
+        $('li').last().css('color', 'red');
+        $('li').eq(2).css('color', 'green');
+
+        $('li').filter('#css').css('fontSize', '60px');
+        $('li').not('#css').css('backgroundColor', 'aqua');
     });
 </script>
 </html>
