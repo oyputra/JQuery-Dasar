@@ -95,13 +95,24 @@
         <button id="btn14">Chaining</button>
     </div>
     <div class="container mt-5">
-        <ul class="fs-5">
-            <li>Belajar</li>
-            <li id="css_siblings">HTML</li>
-            <li id="css">css</li>
-            <li>jquery</li>
-            <li id="db">database</li>
-        </ul>
+        <div>
+            <ul>
+                <li>list pertama</li>
+            </ul>
+            
+            <ul class="fs-5">
+                <li>Belajar</li>
+                <li id="css_siblings">HTML</li>
+                <li id="css">css</li>
+                <li>jquery</li>
+                <li id="db">database</li>
+                <div>
+                    <p>paragraf dalam</p>
+                    <span>span dalam</span>
+                </div>
+                <span>span luar</span>
+            </ul>
+        </div>
     </div>
 </body>
 <script>
@@ -231,19 +242,26 @@
             $('#box2').fadeOut(2000).fadeIn(2000).fadeTo(2000, 0.2);
         })
 
-        // traversing
-        $('li').first().css('color', 'blue');
-        $('li').last().css('color', 'red');
-        $('li').eq(2).css('color', 'green');
+        // // traversing
+        // $('li').first().css('color', 'blue');
+        // $('li').last().css('color', 'red');
+        // $('li').eq(2).css('color', 'green');
 
-        $('li').filter('#css').css('fontSize', '60px');
-        $('li').not('#css').css('backgroundColor', 'aqua');
+        // $('li').filter('#css').css('fontSize', '60px');
+        // $('li').not('#css').css('backgroundColor', 'aqua');
 
-        // siblings: next, nextAll, nextUntill('param'), prev(All, Untill)
-        $('#css_siblings').siblings().css('fontSize', '10px');
-        $('#css_siblings').next().css('backgroundColor', 'red');
-        $('#css_siblings').prevAll().css('color', 'orange');
-        $('#css_siblings').nextUntil('#db').css('color', 'yellow');
+        // // siblings: next, nextAll, nextUntill('param'), prev(All, Untill)
+        // $('#css_siblings').siblings().css('fontSize', '10px');
+        // $('#css_siblings').next().css('backgroundColor', 'red');
+        // $('#css_siblings').prevAll().css('color', 'orange');
+        // $('#css_siblings').nextUntil('#db').css('color', 'yellow');
+
+        // children & parent
+        $('ul').children('span').css('color', 'red');
+        $('ul').find('span').css('fontWeight', 'bold');
+
+        // parent, parents, parents(), parentUntill()
+        $('#css').parentsUntil('.mt-5').css('border', '2px solid red');
     });
 </script>
 </html>
