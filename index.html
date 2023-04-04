@@ -32,6 +32,14 @@
             background: gray;
             color: black;
         }
+        .mt-5 {
+            margin-top: 50px;
+        }
+        #box2 {
+            height: 100px;
+            width: 100px;
+            background-color: grey;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -55,6 +63,27 @@
             <input type="text" id="inputText">
             <input type="submit">
         </form>
+    </div>
+
+    <div class="container mt-5">
+        <div id="box2">Box 2</div>
+        <br>
+        <button id="btn1">Show</button>
+        <button id="btn2">Hide</button>
+        <button id="btn3">Toggle</button>
+        <br>
+        <br>
+        <button id="btn4">Fade In</button>
+        <button id="btn5">Fade Out</button>
+        <button id="btn6">Fade Toggle</button>
+        <button id="btn7">Fade To 0.5</button>
+        <button id="btn8">Fade To 1</button>
+        <br>
+        <br>
+        <button id="btn9">Slide Down</button>
+        <button id="btn10">Slide Up</button>
+        <button id="btn11">Slide Toggle</button>
+
     </div>
 </body>
 <script>
@@ -133,6 +162,43 @@
 
         // ubah nilai dimensi
         $('#boxes_wrap').height(300).width(400);
+
+        // hide & show & toggle
+        $('#btn1').click(function() {
+            $('#box2').show();
+        }) 
+        $('#btn2').click(function() {
+            $('#box2').hide();
+        }) 
+        $('#btn3').click(function() {
+            $('#box2').toggle();
+        }) 
+
+        // fadeIn & fadeOut & fadeToggle & fadeTo(Time, Opacity)
+        $('#btn4').click(function() {
+            $('#box2').fadeIn();
+        }) 
+        $('#btn5').click(function() {
+            $('#box2').fadeOut();
+        }) 
+        $('#btn6').click(function() {
+            $('#box2').fadeToggle();
+        }) 
+        $('#btn7').click(function() {
+            $('#box2').fadeTo(2000, 0.5);
+        }) 
+        $('#btn8').click(function() {
+            $('#box2').fadeTo(2000, 1);
+        }) 
+        $('#btn9').click(function() {
+            $('#box2').slideDown(2000);
+        }) 
+        $('#btn10').click(function() {
+            $('#box2').slideUp(2000);
+        }) 
+        $('#btn11').click(function() {
+            $('#box2').slideToggle(2000);
+        }) 
 
     });
 </script>
